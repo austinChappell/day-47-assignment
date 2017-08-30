@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
 
-import GetImageForm from './GetImageForm';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Home from './Home';
+import MarsRover from './MarsRover';
+import Navbar from './Navbar';
+import RoverPhotos from './RoverPhotos';
 
 class App extends Component {
 
   render() {
     return (
-      <div>
-        <GetImageForm />
-      </div>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route path="/mars_rover/photos/rover/:rover/sol/:sol/camera/:camera" component={RoverPhotos} />
+            <Route path="/mars_rover/photos/rover/:rover/sol/:sol" component={RoverPhotos} />
+            <Route path="/mars_rover" component={MarsRover} />
+            <Route path="/" component={Home} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }

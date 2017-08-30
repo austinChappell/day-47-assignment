@@ -1,0 +1,43 @@
+@mixin tableFlex {
+  display: flex;
+  &>div {
+    border: 1px solid black;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+  .sol {
+    flex-basis: 10%;
+  }
+  .num-of-photos {
+    flex-basis: 20%;
+  }
+  .cameras {
+    flex-basis: 50%;
+    .camera {
+      padding: 0 3px;
+    }
+  }
+  .view-button {
+    flex-basis: 20%;
+  }
+}
+
+.RoverData {
+  border: 5px solid $color-white;
+  text-align: left;
+  width: 80%;
+  margin: 50px 10%;
+  background-color: rgba(0,0,0,0.7);
+  color: $color-white;
+  .table-header {
+    background-color: $color-secondary;
+    width: 100%;
+    @include tableFlex;
+  }
+  .table-row {
+    @include tableFlex;
+  }
+  a {
+    color: $color-white;
+  }
+}

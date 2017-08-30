@@ -1,4 +1,93 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  background-image: url("./images/stars-background.jpg");
+  background-color: #000;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.ImageDisplay {
+  flex-basis: 40%;
+  background-color: #F2A0ED;
+  border: 3px solid #eee;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 25px; }
+  .ImageDisplay p {
+    margin-bottom: 0; }
+  .ImageDisplay img {
+    width: 100%;
+    max-height: 400px; }
+
+.MarsRover {
+  text-align: center;
+  margin-top: 40px; }
+  .MarsRover label {
+    font-size: 20px;
+    color: #eee;
+    margin-right: 20px; }
+  .MarsRover select {
+    font-size: 20px;
+    margin: 10px auto; }
+
+.Navbar {
+  background-color: #73436B;
+  padding: 30px; }
+  .Navbar a {
+    color: #eee;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 20px; }
+    .Navbar a:hover {
+      color: #F2A0ED; }
+
+.RoverData {
+  border: 5px solid #eee;
+  text-align: left;
+  width: 80%;
+  margin: 50px 10%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #eee; }
+  .RoverData .table-header {
+    background-color: #F2A0ED;
+    width: 100%;
+    display: flex; }
+    .RoverData .table-header > div {
+      border: 1px solid black;
+      padding: 4px;
+      box-sizing: border-box; }
+    .RoverData .table-header .sol {
+      flex-basis: 10%; }
+    .RoverData .table-header .num-of-photos {
+      flex-basis: 20%; }
+    .RoverData .table-header .cameras {
+      flex-basis: 50%; }
+      .RoverData .table-header .cameras .camera {
+        padding: 0 3px; }
+    .RoverData .table-header .view-button {
+      flex-basis: 20%; }
+  .RoverData .table-row {
+    display: flex; }
+    .RoverData .table-row > div {
+      border: 1px solid black;
+      padding: 4px;
+      box-sizing: border-box; }
+    .RoverData .table-row .sol {
+      flex-basis: 10%; }
+    .RoverData .table-row .num-of-photos {
+      flex-basis: 20%; }
+    .RoverData .table-row .cameras {
+      flex-basis: 50%; }
+      .RoverData .table-row .cameras .camera {
+        padding: 0 3px; }
+    .RoverData .table-row .view-button {
+      flex-basis: 20%; }
+  .RoverData a {
+    color: #eee; }
+
+.images-render {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }

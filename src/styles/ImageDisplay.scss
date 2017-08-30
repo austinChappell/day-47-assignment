@@ -1,0 +1,15 @@
+.ImageDisplay {
+  flex-basis: 40%;
+  background-color: $color-secondary;
+  border: 3px solid $color-white;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 25px;
+  p {
+    margin-bottom: 0;
+  }
+  img {
+    width: 100%;
+    max-height: 400px;
+  }
+}
