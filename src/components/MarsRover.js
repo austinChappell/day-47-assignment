@@ -39,12 +39,14 @@ class MarsRover extends Component {
   render() {
     return (
       <div className="MarsRover">
-        <label>Select Mars Rover</label>
-        <select onChange={this.handleRoverChange}>
-          <option value="Curiosity">Curiosity</option>
-          <option value="Opportunity">Opportunity</option>
-          <option value="Spirit">Spirt</option>
-        </select>
+        <div className="form">          
+          <label>Select Mars Rover</label>
+          <select onChange={this.handleRoverChange}>
+            <option value="Curiosity">Curiosity</option>
+            <option value="Opportunity">Opportunity</option>
+            <option value="Spirit">Spirt</option>
+          </select>
+        </div>
           <RoverData photoManifest={this.state.photoManifest} rover={this.state.rover} />
       </div>
     )
