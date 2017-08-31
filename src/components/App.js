@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
+import EarthImages from './EarthImages';
 import Home from './Home';
 import MarsRover from './MarsRover';
+import Media from './Media';
 import Navbar from './Navbar';
 import RoverPhotos from './RoverPhotos';
 
@@ -14,12 +16,16 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navbar />
-          <Switch>
-            <Route path="/mars_rover/photos/rover/:rover/sol/:sol/camera/:camera" component={RoverPhotos} />
-            <Route path="/mars_rover/photos/rover/:rover/sol/:sol" component={RoverPhotos} />
-            <Route path="/mars_rover" component={MarsRover} />
-            <Route path="/" component={Home} />
-          </Switch>
+          <div className="container">
+            <Switch>
+              <Route path="/mars_rover/photos/rover/:rover/sol/:sol/camera/:camera" component={RoverPhotos} />
+              <Route path="/mars_rover/photos/rover/:rover/sol/:sol" component={RoverPhotos} />
+              <Route path="/mars_rover" component={MarsRover} />
+              <Route path="/earth_images" component={EarthImages} />
+              <Route path="/media" component={Media} />
+              <Route path="/" component={Home} />
+            </Switch>
+          </div>
         </div>
       </Router>
     );

@@ -1,12 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-image: url("./images/stars-background.jpg");
-  background-color: #000;
-  background-size: cover;
-  background-attachment: fixed; }
-
 .ImageDisplay {
   flex-basis: 40%;
   background-color: #F2A0ED;
@@ -21,8 +12,7 @@ body {
     max-height: 400px; }
 
 .MarsRover {
-  text-align: center;
-  margin-top: 40px; }
+  text-align: center; }
   .MarsRover label {
     font-size: 20px;
     color: #eee;
@@ -31,13 +21,16 @@ body {
     font-size: 20px;
     margin: 10px auto; }
   .MarsRover .form {
-    background: rgba(61, 36, 115, 0.9);
     width: 70%;
     margin: 0 auto; }
 
+.MediaResults .hidden {
+  display: none; }
+
 .Navbar {
-  background-color: #73436B;
-  padding: 30px; }
+  background-image: url("./images/stars_banner.jpg");
+  background-size: cover;
+  padding: 30px 0; }
   .Navbar a {
     color: #eee;
     font-size: 20px;
@@ -45,7 +38,9 @@ body {
     text-decoration: none;
     margin-right: 20px; }
     .Navbar a:hover {
-      color: #F2A0ED; }
+      color: #44DFC2; }
+  .Navbar .active {
+    color: #44DFC2; }
 
 .RoverData {
   border: 5px solid #eee;
@@ -59,7 +54,7 @@ body {
   overflow: scroll;
   padding-top: 30px; }
   .RoverData .table-header {
-    width: 80%;
+    width: 64%;
     height: 30px;
     margin-top: -30px;
     position: fixed;
@@ -106,3 +101,18 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #6D969C;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+.body {
+  margin-top: 40px; }

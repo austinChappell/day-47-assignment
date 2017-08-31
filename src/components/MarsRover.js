@@ -38,8 +38,8 @@ class MarsRover extends Component {
 
   render() {
     return (
-      <div className="MarsRover">
-        <div className="form">          
+      <div className="MarsRover body">
+        <div className="form">
           <label>Select Mars Rover</label>
           <select onChange={this.handleRoverChange}>
             <option value="Curiosity">Curiosity</option>

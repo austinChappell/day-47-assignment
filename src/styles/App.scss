@@ -1,21 +1,31 @@
 $color-primary: #73436B;
 $color-secondary: #F2A0ED;
-$color-tertiary: #3D2473;
+$color-tertiary: #44DFC2;
+$color-background: #6D969C;
 $color-black: #000;
 $color-white: #eee;
+
+@import './ImageDisplay';
+@import './MarsRover';
+@import './MediaResults';
+@import './Navbar';
+@import './RoverData';
+@import './RoverPhotos';
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url('./images/stars-background.jpg');
-  background-color: $color-black;
+  background-color: $color-background;
   background-size: cover;
   background-attachment: fixed;
 }
 
-@import './ImageDisplay';
-@import './MarsRover';
-@import './Navbar';
-@import './RoverData';
-@import './RoverPhotos';
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.body {
+  margin-top: 40px;
+}
