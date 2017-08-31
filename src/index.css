@@ -27,6 +27,23 @@
 .MediaResults .hidden {
   display: none; }
 
+.MediaResults .results-title {
+  text-transform: uppercase;
+  text-align: center; }
+
+.MediaResults .flex-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .MediaResults .flex-results .AudioResult, .MediaResults .flex-results .ImageResult, .MediaResults .flex-results .VideoResult {
+    width: 300px;
+    margin: 20px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    word-wrap: break-word; }
+
 .Navbar {
   background-image: url("./images/stars_banner.jpg");
   background-size: cover;

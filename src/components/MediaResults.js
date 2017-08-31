@@ -57,14 +57,13 @@ class MediaResults extends Component {
   }
 
   render() {
-    console.log('STATE', this.state);
     let results;
 
-    if (this.props.mediaType === 'image') {
+    if (this.props.mediaSearchType === 'image') {
       results = this.props.dataArray.map((data, index) => {
         return <ImageResult key={index} data={data} />
       });
-    } else if (this.props.mediaType === 'audio') {
+    } else if (this.props.mediaSearchType === 'audio') {
       results = this.props.dataArray.map((data, index) => {
         return <AudioResult
             key={index}
@@ -86,6 +85,9 @@ class MediaResults extends Component {
 
     return (
       <div className="MediaResults">
+        <h1 className={this.props.showResultsTitle ? 'results-title' : 'hidden'}>
+          {this.props.mediaSearchType} results for "{this.props.searchTerm}"
+        </h1>
         <button
           className={this.props.showAudioPlayer ? '' : 'hidden'}
           onClick={this.pauseAudio}>Pause Audio</button>
@@ -100,7 +102,9 @@ class MediaResults extends Component {
           src={this.state.audioSource}
           controls
           autoPlay></audio>
-        {results}
+        <div className="flex-results">
+          {results}
+        </div>
       </div>
     )
   }

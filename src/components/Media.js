@@ -9,7 +9,10 @@ class Media extends Component {
 
     this.state = {
       search: '',
+      searchTerm: '',
+      showResultsTitle: false,
       mediaType: 'image',
+      mediaSearchType: '',
       data: {items: []},
       showAudioPlayer: false,
       showVideoPlayer: false
@@ -43,18 +46,23 @@ class Media extends Component {
     fetch(url).then((response) => {
       return response.json();
     }).then((results) => {
-      console.log(results);
-      this.setState({data: results.collection});
+      console.log('RESULTS', results);
+      this.setState({
+        data: results.collection,
+        search: '',
+        searchTerm: this.state.search,
+        showResultsTitle: true,
+        mediaSearchType: this.state.mediaType
+      });
     })
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="Media body">
         <div>
           <label>Search Term: </label>
-          <input onChange={(e) => this.handleInputChange(e, 'search')} />
+          <input onChange={(e) => this.handleInputChange(e, 'search')} value={this.state.search} />
           <label>Media Type: </label>
           <select onChange={(e) => this.handleInputChange(e, 'mediaType')}>
             <option value="image">Image</option>
@@ -66,6 +74,9 @@ class Media extends Component {
         <MediaResults
           dataArray={this.state.data.items}
           mediaType={this.state.mediaType}
+          mediaSearchType={this.state.mediaSearchType}
+          searchTerm={this.state.searchTerm}
+          showResultsTitle={this.state.showResultsTitle}
           showAudioPlayer={this.state.showAudioPlayer}
           showVideoPlayer={this.state.showVideoPlayer} />
       </div>
